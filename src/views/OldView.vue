@@ -7,12 +7,6 @@
 </template>
 <script>
 import OldInput from "@/components/Old/OldInput.vue";
-import { configureCompat } from "vue";
-
-configureCompat({
-  INSTANCE_LISTENERS: true,
-  COMPONENT_V_MODEL: true,
-});
 
 export default {
   name: "OldView",

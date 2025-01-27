@@ -10,15 +10,16 @@
 </template>
 
 <script setup>
-import { ref, configureCompat } from "vue";
+import { ref } from "vue";
 import NewButton from "@/components/New/NewButton.vue";
 import NewInput from "@/components/New/NewInput.vue";
 
-configureCompat({
-  INSTANCE_LISTENERS: false,
-  COMPONENT_V_MODEL: false,
+defineOptions({
+  compatConfig: {
+    INSTANCE_LISTENERS: false,
+    COMPONENT_V_MODEL: false,
+  },
 });
-
 const counter = ref(0);
 const inputValue = ref("");
 
