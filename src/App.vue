@@ -1,9 +1,11 @@
 <template>
-  <nav>
-    <router-link to="/">New Page</router-link> |
-    <router-link to="/old">Old Page</router-link>
-  </nav>
-  <router-view />
+  <div>
+    <nav>
+      <router-link to="/">New Page</router-link> |
+      <router-link to="/old">Old Page</router-link>
+    </nav>
+    <router-view />
+  </div>
 </template>
 
 <style>
