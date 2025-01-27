@@ -1,23 +1,12 @@
 const { defineConfig } = require("@vue/cli-service");
-
 const path = require("path");
 const webpack = require("webpack");
 
-const isLocalhost =
-  process.env.NODE_ENV === "local" || process.env.NODE_ENV === "development";
-
 module.exports = defineConfig({
   transpileDependencies: true,
-  //publicPath: dotEnvConfig.PUBLIC_PATH,
-  //runtimeCompiler: true,
-  // configureWebpack: (config) => {
-  //   config.experiments = {
-  //     topLevelAwait: true,
-  //   };
-  // },
 
   chainWebpack: (config) => {
-    if (isLocalhost) config.optimization.runtimeChunk("single"); // Need to be able to have HMR while developing.
+    config.optimization.runtimeChunk("single");
     config.devServer.historyApiFallback(true);
 
     config.optimization.delete("splitChunks");

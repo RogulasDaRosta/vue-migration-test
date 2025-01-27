@@ -10,31 +10,14 @@
 </template>
 
 <script setup>
-import { ref, configureCompat, onBeforeMount, onBeforeUnmount } from "vue";
+import { ref, configureCompat } from "vue";
 import NewButton from "@/components/New/NewButton.vue";
 import NewInput from "@/components/New/NewInput.vue";
 
 configureCompat({
   INSTANCE_LISTENERS: false,
   COMPONENT_V_MODEL: false,
-  RENDER_FUNCTION: false,
 });
-
-// onBeforeMount(() => {
-//   configureCompat({
-//     INSTANCE_LISTENERS: false,
-//     COMPONENT_V_MODEL: false,
-//     RENDER_FUNCTION: false,
-//   });
-// });
-
-// onBeforeUnmount(() => {
-//   configureCompat({
-//     INSTANCE_LISTENERS: true,
-//     COMPONENT_V_MODEL: true,
-//     RENDER_FUNCTION: true,
-//   });
-// });
 
 const counter = ref(0);
 const inputValue = ref("");

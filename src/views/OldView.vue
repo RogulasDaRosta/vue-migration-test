@@ -12,7 +12,6 @@ import { configureCompat } from "vue";
 configureCompat({
   INSTANCE_LISTENERS: true,
   COMPONENT_V_MODEL: true,
-  RENDER_FUNCTION: true,
 });
 
 export default {
